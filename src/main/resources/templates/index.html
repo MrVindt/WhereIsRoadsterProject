@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>WhereIsRoadster</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" th:href="@{/style.css}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> 
+
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='title'>
+  <span class="pretty-header left-right-line-short-header">
+    <b>WHERE IS ROADSTER</b>
+  </span>
+</div>
+<!-- partial -->
+  
+<br>
+
+<nav class="navigation">
+    <a href="/">
+    <img src="https://steemitimages.com/DQmNoFsWJeyr1y3XQEBE1uBrPvouwqnbfQpjWcgh4Xw7ALH/rocket-312767.png">
+  </a>
+  <ul>
+    <li><a href="/" class="menu__link"><b>Home</b></a></li>
+    <li><a href="/about" class="menu__link"><b>About</b></a></li>
+  </ul>
+</nav> 
+
+<div class="photo">
+  <img src="img/Mashina.png">
+</div>
+<div class="ramka-3">
+        <div id="bubble-1">
+          <ul>
+            <li>
+              <b>earth distance km:</b>
+              <b th:text="${roadster.earth_distance_km}"></b>
+            </li>
+          <li>
+            <b>mars distance km:</b>
+            <b th:text="${roadster.mars_distance_km}"></b>
+          </li>
+          <li>
+            <b>speed kph:</b>
+            <b th:text="${roadster.speed_kph}"></b>
+          </li>
+          <li>
+            <b>launch date: 06.02.2018</b>
+          </li>
+          </ul>
+        </div>    
+</div>
+</body>
+</html>
