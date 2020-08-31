@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
-import com.example.demo.httpclient.HttpClientImp;
 import com.example.demo.entities.RoadsterInfo;
+import com.example.demo.httpclient.HttpClient;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,17 +15,18 @@ public class MainController {
     @Value("${spacex.http.get.roadsterInfo}")
     private String httpGetRoadsterInfo;
 
-    private HttpClientImp httpImp;
+    private HttpClient httpClient;
 
     @Autowired
-    public MainController(HttpClientImp httpImp) {
-        this.httpImp = httpImp;
+    public MainController(HttpClient httpClient) {
+        this.httpClient = httpClient;
     }
+
 
     @RequestMapping(value = "/")
     public String mainController(Model model) {
         try {
-            var roadster = httpImp.get(httpGetRoadsterInfo, RoadsterInfo.class);
+            var roadster = httpClient.get(httpGetRoadsterInfo, RoadsterInfo.class);
             model.addAttribute("roadster", roadster);
             return "index";
         } catch (Throwable e) {
