@@ -1,6 +1,5 @@
 package com.example.demo.httpclient;
 
-import com.example.demo.httpclient.HttpClient;
 import lombok.var;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;

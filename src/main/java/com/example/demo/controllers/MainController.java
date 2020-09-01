@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.logging.Logger;
+
 @Controller
 public class MainController {
 
@@ -30,7 +32,7 @@ public class MainController {
             model.addAttribute("roadster", roadster);
             return "index";
         } catch (Throwable e) {
-            System.out.println(e.getMessage());
+            Logger.getLogger(e.getMessage());
         }
         return "error";
     }
