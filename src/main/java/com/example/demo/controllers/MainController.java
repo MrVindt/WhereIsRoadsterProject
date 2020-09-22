@@ -17,7 +17,7 @@ public class MainController {
     @Value("${spacex.http.get.roadsterInfo}")
     private String httpGetRoadsterInfo;
 
-    private HttpClient httpClient;
+    private final HttpClient httpClient;
 
     @Autowired
     public MainController(HttpClient httpClient) {
