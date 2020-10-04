@@ -1,7 +1,9 @@
 html {
     height: 100%;
+    width: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
+    position: fixed;
 }
 
 #stars {
@@ -93,7 +95,6 @@ html {
     }
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
 
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
